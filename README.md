@@ -1,4 +1,28 @@
-# dapr-cron-trigger
+# Run the function app
+
+## Prerequisites
+This sample requires you to have the following installed on your machine:
+- [Setup Dapr](https://github.com/dapr/quickstarts/tree/master/hello-world) : Follow [instructions](https://docs.dapr.io/getting-started/install-dapr/) to download and install the Dapr CLI and initialize Dapr.
+- [Install Azure Functions Core Tool](https://github.com/Azure/azure-functions-core-tools/blob/master/README.md#windows)
+- Install Python on your machine
+    - This sample uses Python 3.8. Some nuance or issue is expected if using other version
+- [Set up Python Environment in Visual Studio Code](https://code.visualstudio.com/docs/python/python-tutorial)
+- [Install .NET Core SDK](https://dotnet.microsoft.com/download), used for install Dapr Extension for non .NET language
+
+# Run Function App with Dapr
+
+Install Dapr extension
+
+```
+func extensions install -p Microsoft.Azure.WebJobs.Extensions.Dapr -v 0.15.0-preview01
+```
+
+Run function host with Dapr.
+
+Windows
+```
+dapr run --app-id functionapp --app-port 3001 --dapr-http-port 3501 --resources-path .\components -- func host start
+```
 
 ## Error
 
