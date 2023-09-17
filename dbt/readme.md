@@ -1,4 +1,4 @@
-# DaprBindingTrigger - C<span>#</span>
+# DaprBindingTrigger - Python
 
 `Dapr Binding Trigger` provides input binding capabilities for applications and a consistent approach to interacting with different cloud/on-premise services or systems.
 Developers can have the Dapr runtime trigger an application with input bindings.
